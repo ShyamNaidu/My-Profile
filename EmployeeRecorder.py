@@ -1,15 +1,23 @@
 def view_emp_records():
-    pass
+    with open('employees.txt', 'r') as f:
+        for line in f.readlines():
+            data = line.rstrip()
+            name, des = data.split("|") 
+            print(name + "-" + des) 
 
 def add_new_record():
-    pass
+    name = input("Enter Employee Name: ")
+    des = input("Enter Employee Designation")
 
+    with open('employees.txt', 'a') as f:
+        f.write(name + '|' + des + "\n")
 
-while true:
-    resp = input("Do you want to view/add new record (V/A/Q for quit): ").LOWER
+while True:
+    resp = input("Do you want to view/add new record (V/A/Q for quit): ")
     if resp == 'q':
         break
     if resp == 'a':
-        add_new_record
-    if resp == 'v'"
-        view_emp_records
+        add_new_record()
+    if resp == 'v':
+        view_emp_records()
+
