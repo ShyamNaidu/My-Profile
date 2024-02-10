@@ -74,5 +74,5 @@ import pandas as pd
 # print(df.info()) 
 
 # Reading excercise.csv file
-df = pd.read_csv('/workspaces/My-Profile/datastore/exercise.csv')
-print(df.to_string)
+df = pd.read_csv('/workspaces/My-Profile/datastore/excercise.txt')
+print(df)
