@@ -59,5 +59,20 @@ import pandas as pd
 # print("Printing children records:")
 # print(myfamily.loc[["Son","Daughter"]])  #prints the first 2 records in a DataFrame
 
-df = pd.read_csv('employees.txt')
-print(df)
+
+# # Reading csv file
+# df = pd.read_csv('/workspaces/My-Profile/datastore/employees.txt')
+# print(df)
+# pd.options.display.max_rows = 9999
+# print(pd.options.display.max_rows) 
+
+# # Reading json file
+# df = pd.read_json('/workspaces/My-Profile/datastore/jsondata.json')
+# print(df.to_string())
+# print(df.head())
+# print(df.tail()) 
+# print(df.info()) 
+
+# Reading excercise.csv file
+df = pd.read_csv('/workspaces/My-Profile/datastore/exercise.csv')
+print(df.to_string)
