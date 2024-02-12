@@ -83,6 +83,7 @@ pd.options.display.max_rows = 200
 
 x =  df["Calories"].mode()[0]
 df["Calories"].fillna(x,inplace=True)
+df["Date"] = pd.to_datetime(df["Date"])
 print(df)
 
 
