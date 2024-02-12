@@ -74,5 +74,15 @@ import pandas as pd
 # print(df.info()) 
 
 # Reading excercise.csv file
-df = pd.read_csv('/workspaces/My-Profile/datastore/excercise.txt')
+df = pd.read_csv('/workspaces/My-Profile/datastore/exercisecal.csv')
+pd.options.display.max_rows = 200
+
+# new_df = df.dropna()
+# df.fillna(30,inplace=True)
+# print(df)
+
+x =  df["Calories"].mode()[0]
+df["Calories"].fillna(x,inplace=True)
 print(df)
+
+
